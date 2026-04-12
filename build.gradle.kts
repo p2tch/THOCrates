@@ -12,6 +12,7 @@ repositories {
         name = "papermc-repo"
     }
     maven("https://repo.okaeri.cloud/releases")
+    maven("https://repo.panda-lang.org/releases")
 }
 
 dependencies {
@@ -20,6 +21,8 @@ dependencies {
     implementation(libs.guice)
     implementation(libs.okaeri.configs.yaml.bukkit)
     implementation(libs.okaeri.configs.serdes.bukkit)
+    implementation(libs.multification)
+    implementation(libs.litecommands)
 }
 
 kotlin {
