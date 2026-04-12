@@ -18,8 +18,8 @@ dependencies {
     compileOnly(libs.paper.api)
     implementation(libs.kotlin.stdlib)
     implementation(libs.guice)
-    implementation(libs.okaeri.configs)
     implementation(libs.okaeri.configs.yaml.bukkit)
+    implementation(libs.okaeri.configs.serdes.bukkit)
 }
 
 kotlin {
