@@ -16,6 +16,7 @@ repositories {
 dependencies {
     compileOnly(libs.paper.api)
     implementation(libs.kotlin.stdlib)
+    implementation(libs.guice)
 }
 
 kotlin {
