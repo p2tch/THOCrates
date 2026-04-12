@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlin)
     alias(libs.plugins.shadow)
+    alias(libs.plugins.blossom)
 }
 
 group = "xyz.thehiddenobject"
@@ -13,6 +14,7 @@ repositories {
     }
     maven("https://repo.okaeri.cloud/releases")
     maven("https://repo.panda-lang.org/releases")
+    maven("https://repo.eternalcode.pl/releases")
 }
 
 dependencies {
@@ -22,11 +24,22 @@ dependencies {
     implementation(libs.okaeri.configs.yaml.bukkit)
     implementation(libs.okaeri.configs.serdes.bukkit)
     implementation(libs.multification)
+    implementation(libs.multification.okaeri)
     implementation(libs.litecommands)
 }
 
 kotlin {
     jvmToolchain(21)
+}
+
+sourceSets {
+    main {
+        blossom {
+            kotlinSources {
+                property("version", project.version.toString())
+            }
+        }
+    }
 }
 
 tasks.build {

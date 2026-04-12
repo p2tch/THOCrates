@@ -5,6 +5,7 @@ guice = "7.0.0"
 okaeri-configs = "6.1.0-beta.1"
 multification = "1.2.4"
 litecommands = "3.10.9"
+blossom = "2.2.0"
 
 [libraries]
 paper-api = { module = "io.papermc.paper:paper-api", version.ref = "paper" }
@@ -12,9 +13,11 @@ kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.re
 guice = { module = "com.google.inject:guice", version.ref = "guice" }
 okaeri-configs-serdes-bukkit = { module = "eu.okaeri:okaeri-configs-serdes-bukkit", version.ref = "okaeri-configs" }
 okaeri-configs-yaml-bukkit = { module = "eu.okaeri:okaeri-configs-yaml-bukkit", version.ref = "okaeri-configs" }
-multification = { module = "com.eternalcode:multification-core", version.ref = "multification" }
+multification = { module = "com.eternalcode:multification-paper", version.ref = "multification" }
+multification-okaeri = { module = "com.eternalcode:multification-okaeri", version.ref = "multification" }
 litecommands = { module = "dev.rollczi:litecommands-bukkit", version.ref = "litecommands" }
 
 [plugins]
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 shadow = { id = "com.gradleup.shadow", version = "9.4.1" }
+blossom = { id = "net.kyori.blossom", version.ref = "blossom" }

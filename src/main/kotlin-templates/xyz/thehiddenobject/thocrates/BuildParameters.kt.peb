@@ -1,0 +1,5 @@
+package xyz.thehiddenobject.thocrates
+
+object BuildParameters {
+    const val VERSION = "{{ version }}"
+}
