@@ -11,12 +11,15 @@ repositories {
     maven("https://repo.papermc.io/repository/maven-public/") {
         name = "papermc-repo"
     }
+    maven("https://repo.okaeri.cloud/releases")
 }
 
 dependencies {
     compileOnly(libs.paper.api)
     implementation(libs.kotlin.stdlib)
     implementation(libs.guice)
+    implementation(libs.okaeri.configs)
+    implementation(libs.okaeri.configs.yaml.bukkit)
 }
 
 kotlin {
