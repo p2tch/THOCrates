@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.4.0-Beta1"
-    id("com.gradleup.shadow") version "8.3.0"
+    alias(libs.plugins.kotlin)
+    alias(libs.plugins.shadow)
 }
 
 group = "xyz.thehiddenobject"
@@ -14,8 +14,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    compileOnly(libs.paper.api)
+    implementation(libs.kotlin.stdlib)
 }
 
 kotlin {

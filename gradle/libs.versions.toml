@@ -1,0 +1,11 @@
+[versions]
+kotlin = "2.4.0-Beta1"
+paper = "1.21.11-R0.1-SNAPSHOT"
+
+[libraries]
+paper-api = { module = "io.papermc.paper:paper-api", version.ref = "paper" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+
+[plugins]
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+shadow = { id = "com.gradleup.shadow", version = "8.3.0" }

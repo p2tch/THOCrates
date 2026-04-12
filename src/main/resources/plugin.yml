@@ -1,5 +1,5 @@
 name: THOCrates
-version: '1.0.0'
+version: ${version}
 main: xyz.thehiddenobject.thocrates.bootstrap.PluginBootstrap
 api-version: '1.21'
 authors: [ p2tch ]
