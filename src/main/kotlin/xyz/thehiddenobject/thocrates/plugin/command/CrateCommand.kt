@@ -18,18 +18,18 @@ class CrateCommand @Inject constructor(
 ) {
     @ExecuteDefault
     fun default(@Context player: Player) {
-        val notice: Notice = Notice.builder()
-            .chat(
-                "",
-                "<dark_gray>» <gray>You are currently using <#E5A050><bold>THOCrates</bold> ${BuildParameters.VERSION}",
-                "<gray>Use <#E5A050><italic>/crate help</italic> <gray>to see the list of available commands.",
-                ""
-            )
-            .build()
-
         multification.create()
             .player(player.uniqueId)
-            .notice(notice)
+            .notice(
+                Notice.builder()
+                    .chat(
+                        "",
+                        "<dark_gray>» <gray>You are currently using <#E5A050><bold>THOCrates</bold> ${BuildParameters.VERSION}",
+                        "<gray>Use <#E5A050><italic>/crate help</italic> <gray>to see the list of available commands.",
+                        ""
+                    )
+                    .build()
+            )
             .send()
     }
 }
