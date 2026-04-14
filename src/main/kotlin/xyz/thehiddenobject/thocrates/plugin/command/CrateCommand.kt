@@ -2,19 +2,25 @@ package xyz.thehiddenobject.thocrates.plugin.command
 
 import com.eternalcode.multification.notice.Notice
 import com.google.inject.Inject
+import dev.rollczi.litecommands.annotations.argument.Arg
 import dev.rollczi.litecommands.annotations.command.Command
 import dev.rollczi.litecommands.annotations.context.Context
+import dev.rollczi.litecommands.annotations.execute.Execute
 import dev.rollczi.litecommands.annotations.execute.ExecuteDefault
 import dev.rollczi.litecommands.annotations.permission.Permission
 import org.bukkit.entity.Player
 import xyz.thehiddenobject.thocrates.BuildParameters
+import xyz.thehiddenobject.thocrates.configuration.manager.ConfigurationFiles
+import xyz.thehiddenobject.thocrates.configuration.manager.ConfigurationManager
 import xyz.thehiddenobject.thocrates.multification.PaperPluginMultification
 import xyz.thehiddenobject.thocrates.plugin.command.const.CommandPermissions
+import kotlin.system.measureTimeMillis
 
 @Command(name = "crate", aliases = ["crates"])
 @Permission(CommandPermissions.CRATE_COMMAND_PERMISSION)
 class CrateCommand @Inject constructor(
     private val multification: PaperPluginMultification,
+    private val configurationManager: ConfigurationManager
 ) {
     @ExecuteDefault
     fun default(@Context player: Player) {
@@ -30,6 +36,22 @@ class CrateCommand @Inject constructor(
                     )
                     .build()
             )
+            .send()
+    }
+
+    @Execute(name = "reload")
+    fun reload(@Context player: Player, @Arg reloadOption: ReloadOptions) {
+        val time = measureTimeMillis {
+            if (reloadOption == ReloadOptions.ALL) configurationManager.reloadAll()
+            else configurationManager.reload(
+                ConfigurationFiles.valueOf(reloadOption.toString())
+            )
+        }
+
+        multification.create()
+            .player(player.uniqueId)
+            .notice { it.reloaded }
+            .placeholder("{TIME}", time.toString())
             .send()
     }
 }
