@@ -2,18 +2,18 @@
     <h1>THOCrates</h1>
     <p>THOCrates is a production-ready, high-performance Minecraft crate plugin with full customization.</p>
 
-    [![Modrinth](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg)](https://modrinth.com/plugin/thocrates)
-    [![Github](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/github_vector.svg)](https://github.com/p2tch/THOCrates)
-    [![Gradle](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/built-with/gradle_vector.svg)](https://gradle.org/)
-    [![Kotlin](assets/built_with_kotlin.svg)](https://kotlinlang.org/docs/home.html)
-    [![paper](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/paper_vector.svg)](https://papermc.io/)
+[![Modrinth](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg)](https://modrinth.com/plugin/thocrates)
+[![Github](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/github_vector.svg)](https://github.com/p2tch/THOCrates)
+[![Gradle](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/built-with/gradle_vector.svg)](https://gradle.org/)
+[![Kotlin](assets/built_with_kotlin.svg)](https://kotlinlang.org/docs/home.html)
+[![paper](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/paper_vector.svg)](https://papermc.io/)
 </div>
 
 <hr>
 
 ### 📜 License
 
-THOChat is licensed under the GNU AGPL v3. See the license file for more information.
+THOCrates is licensed under the GNU AGPL v3. See the license file for more information.
 
 <hr>
 
